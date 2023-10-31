@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+
+import os
+from os import getcwd
+from os.path import join, basename
+from os.path import exists as there
+from shutil import copyfile
+
+def main():
+    print("[->] Init [<-]")
+    cd = getcwd();
+    
+    # html php files
+    copySRC = [
+        join(cd, 'index.html'),
+        join(cd, 'login.html'),
+        join(cd, 'signup.html'),
+        join(cd, 'signup.php'),
+    ]
+    
+    # images
+    copySrcImg = [
+        join(cd, 'images', 'bams-logo.png')
+    ]
+    
+    # css files
+    copySrcCss = [
+        join(cd, 'css', 'mainpage.css')
+    ]
+    
+    # destination
+    copyDEST=input("-> Enter htdocs location:\n-> Example: /Applications/xampp/htdocs (macos default)\n-> ")
+    if copyDEST=="":
+        copyDEST="/Applications/xampp/htdocs"
+    
+    # copy html php files
+    print(f"[->] Copy [<-]")
+    for file in copySRC:
+        copyfile(file, join(copyDEST, basename(file)))
+        print(f"[->] copied {file} to {copyDEST}.")
+    
+    # create images dir if not present
+    if not there(join(copyDEST, 'images')):
+        os.mkdir(join(copyDEST, 'images'))
+        print(f"[--->] mkdir: {join(copyDEST, 'images')}.")
+    
+    # copy images
+    for img in copySrcImg:
+        copyfile(img, join(copyDEST, 'images', basename(img)))
+        print(f"[->] copied {img} to {join(copyDEST, 'images')}.")
+    
+    # create css directory if not present
+    if not there(join(copyDEST, 'css')):
+        os.mkdir(join(copyDEST, 'css'))
+        print(f"[--->] mkdir: {join(copyDEST, 'css')}.")
+    
+    # copy css
+    for css in copySrcCss:
+        copyfile(css, join(copyDEST, 'css', basename(css)))
+        print(f"[->] copied {css} to {join(copyDEST, 'css')}.")
+    
+    print("[->] END [<-]")
+
+if __name__=="__main__":main()

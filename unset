@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+
+from os import remove
+from os.path import join
+from os.path import exists as there
+from shutil import rmtree
+
+def main():
+    print("[->] UN-INIT [<-]")
+    
+    # get htdocs dir
+    xampp = input("-> Enter htdocs location:\n-> Example: /Applications/xampp/htdocs (macos)\n-> ")
+    if xampp=="":
+        xampp="/Applications/xampp/htdocs"
+    
+    print("[->] Delete [<-]")
+    
+    # delete images dir if present
+    if there(join(xampp, 'images')):
+        rmtree(join(xampp, 'images'))
+        print(f"[->] deleted {join(xampp, 'images')}*.")
+    
+    # delete css dir if present
+    if there(join(xampp, 'css')):
+        rmtree(join(xampp, 'css'))
+        print(f"[->] deleted {join(xampp, 'css')}*.")
+    
+    # root delete paths
+    deletePaths = [
+        join(xampp, 'index.html'),
+        join(xampp, 'login.html'),
+        join(xampp, 'signup.html'),
+        join(xampp, 'signup.php')
+    ]
+    
+    # delete root files
+    for file in deletePaths:
+        remove(file)
+        print(f"[->] deleted {file}.")
+    
+    print("[->] END [<-]")
+    
+
+if __name__=="__main__":main()
