@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Soumyo Deep Gupta, Sairam Pimple">
+        <meta name="description" content="Signup Page">
+        <title>BAMS - SIGNUP</title>
+    </head>
+
+    <body>
+        <center><h1>SIGNUP</h1></center><br>
+        <center><form method="post" action="signup.php">
+            <div>
+                <label for="FirstName">First Name: </label> <input type="text" id="fname" name="fname"> <br>
+                <label for="LastName">Last Name: </label> <input type="text" id="lname" name="lname"> <br>
+                <label for="Email">Email: </label> <input type="text" id="email" name="email"><br>
+                <label for="username">Username: </label> <input type="text" id="uname" name="uname"><br>
+                <label for="password">Password: </label> <input type="password" id="pass" name="pass"> <br>
+            </div>
+            
+            <p>Choose Type of Account To be Created:</p>
+
+            <div>
+                <input type="radio" id="Savings" name="atype" value="Savings" checked> <label for="Savings">Savings</label> <br>
+            </div>
+            <div>
+                <input type="radio" id="Salary" name="atype" value="Salary"> <label for="Salary">Salary</label> <br> <br>
+            </div>
+
+            <div>
+                <input type="checkbox" id="terms" name="terms" value="terms"> <label for="terms">I Agree to the Terms and Conditions</label> <br> <br>
+            </div>
+            <input type="submit">        <a href="index.html"><button type="button">Go Back</button></a>
+        </form></center>
+
+    </body>
+</html>
