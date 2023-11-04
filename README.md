@@ -32,6 +32,14 @@ Bank Accounts Management System, Authors - [Soumyo Deep Gupta](https://github.co
 3. Then Select ```bams_``` and go to import
 4. Select ```bams.sql```
 
+#### Remove Project from XAMPP htdocs
+##### MacOS
+1. run command ```./unset```
+##### Windows
+1. run command ```python unset```
+##### Linux
+1. run command ```./unset```
+
 #### Common Errors
 1. Check the ```htdocs``` directory properly.
 2. In MacOS, Turn off the ```MySQL Server``` from ```System Settings``` before Starting ```MySQL Server``` in ```XAMPP```
