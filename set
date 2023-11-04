@@ -18,7 +18,9 @@ def main():
         join(cd, 'signup.php'),
         join(cd, 'login.php'),
         join(cd, 'private.html'),
-        join(cd, 'control.php')
+        join(cd, 'control.php'),
+        join(cd, 'appnow.php'),
+        join(cd, 'appnow.html')
     ]
     
     # images
