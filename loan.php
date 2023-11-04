@@ -11,9 +11,14 @@
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $salary = $row['salary'];
-            echo "<center><h3>Salary: $salary</h3></center>";
-            echo "";
+            $salary = (int)$salary;
+            $emi = ($salary *40)/100;
+            $aggregate = $emi * 12;
+            $_SESSION['aggregate'] = $aggregate;
+            $conn->close();
+            header('Location: sanction.php');
         }else{
+            $conn->close();
             echo "<script>alert('Database Entry Failed!')</script>";
             header("Location: appnow.php");
         }
