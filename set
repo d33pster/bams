@@ -22,7 +22,9 @@ def main():
         join(cd, 'appnow.php'),
         join(cd, 'appnow.html'),
         join(cd, 'employment.php'),
-        join(cd, 'loan.php')
+        join(cd, 'loan.php'),
+        join(cd, 'index_loggedin.html'),
+        join(cd, 'logout.php')
     ]
     
     # images
@@ -32,7 +34,8 @@ def main():
     
     # css files
     copySrcCss = [
-        join(cd, 'css', 'mainpage.css')
+        join(cd, 'css', 'mainpage.css'),
+        join(cd, 'css', 'loggedin-page.css')
     ]
     
     # destination
