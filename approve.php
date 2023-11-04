@@ -26,11 +26,13 @@
             $sql2 = "select loanid from loans where username='$username';";
             $result2 = $conn->query($sql2);
             $row2 = $result2->fetch_assoc();
-            $loanAdd = $row2["loanid"]; // recently inserted loan record
+            $loanAdd = (string)$row2["loanid"]; // recently inserted loan record
 
             // insert this record in the user_details table
-            $sql3 = "insert into user_details(loans) values('$loanAdd');";
-            $conn->query($sql3);
+            $stmt = $conn->prepare("update user_details set loans=? where username=?");
+            $stmt->bind_param("ss", $loanAdd, $username);
+            $stmt->execute();
+            $stmt->close();
             $conn->close();
             header("Location: index_loggedin.html");
         }else{
@@ -38,11 +40,13 @@
             $sql2 = "select loanid from loans where username='$username';";
             $result2 = $conn->query($sql2);
             $row2 = $result2->fetch_assoc();
-            $loanAdd = ", " + $row2["loanid"];
+            $loanAdd = ", ".$row2["loanid"];
 
             // insert this record in the user_details table
-            $sql3 = "update user_details set loans='$loanAdd' where username='$username';";
-            $conn->query($sql3);
+            $stmt = $conn->prepare("update user_details set loans=? where username=?");
+            $stmt->bind_param("ss", $loanAdd, $username);
+            $stmt->execute();
+            $stmt->close();
             $conn->close();
             header("Location: index_loggedin.html");
         }
