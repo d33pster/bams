@@ -34,7 +34,6 @@ def main():
     
     # css files
     copySrcCss = [
-        join(cd, 'css', 'mainpage.css'),
         join(cd, 'css', 'loggedin-page.css')
     ]
     
