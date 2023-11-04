@@ -11,8 +11,8 @@ Bank Accounts Management System
 1. Git Clone from github -> https://github.com/d33pster/bams .
 2. Install Xampp from the Link Provided for your respective OS.
 3. If not using macos, find out the ```htdocs``` directory inside the xampp installation directory.
-4. Open Xampp and run Apache and MySQL Servers. Check Common Errors if MySQL Server fails to start -> [Common Errors]
-5. Open http://localhost/phpmyadmin and follow the instructions []
+4. Open Xampp and run Apache and MySQL Servers. Check Common Errors if MySQL Server fails to start -> [Common Errors](#common-errors)
+5. Open http://localhost/phpmyadmin and follow the instructions -> [Set Up PHPMYADMIN](#phpmyadmin-setup-needed-before-launch)
 6. Open a terminal at the cloned folder.
 ##### MacOS
 1. run command ```chmod a+x set unset launch```
@@ -26,7 +26,8 @@ Bank Accounts Management System
 2. run command ```./set``` and enter the ```htdocs``` DIRECTORY PATH
 3. run command ```./launch```
 
-#### 
+#### PHPMYADMIN Setup (needed before launch)
+1. 
 
 #### Common Errors
 1. Check the ```htdocs``` directory properly.
