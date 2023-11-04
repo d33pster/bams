@@ -35,7 +35,9 @@ def main():
         join(xampp, 'private.html'),
         join(xampp, 'control.php'),
         join(xampp, 'appnow.php'),
-        join(xampp, 'appnow.html')
+        join(xampp, 'appnow.html'),
+        join(xampp, 'employment.php'),
+        join(xampp, 'loan.php')
     ]
     
     # delete root files
