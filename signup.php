@@ -30,7 +30,7 @@
             header('Location: index.html');
         }
         else{
-            echo "<script>alert('Please Check the terms and Conditions')</script>";
+            echo "<script>alert('Please Check the terms and Conditions');</script>";
             header("Location: signup.html");
         }
     }

@@ -4,12 +4,6 @@
     $username = $_POST['uname'];
     $password = $_POST['pass'];
 
-    // prevent mysql injection
-    // $username = stripcslashes($username);
-    // $password = stripcslashes($password);
-    // $username = mysqli_real_escape_string($conn, $username);
-    // $password = mysqli_real_escape_string($conn, $password);
-
     // database connection.
     $conn = new mysqli('localhost', 'root', '', 'bams_');
     if ($conn->connect_error) {
@@ -31,7 +25,7 @@
         else{
             $stmt->close();
             $conn->close();
-            echo "<script>alert('Username or Password Incorrect')</script>";
+            echo "<script type='text/javascript'> alert('Username or Password Incorrect'); </script>";
             header("Location: login.html");
         }
     }
