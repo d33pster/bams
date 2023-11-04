@@ -24,7 +24,9 @@ def main():
         join(cd, 'employment.php'),
         join(cd, 'loan.php'),
         join(cd, 'index_loggedin.html'),
-        join(cd, 'logout.php')
+        join(cd, 'logout.php'),
+        join(cd, 'sanction.php'),
+        join(cd, 'approve.php')
     ]
     
     # images
