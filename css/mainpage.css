@@ -8,17 +8,16 @@
     width: 8%;
 }
 
-.main-nav {
-    padding-left: 36%;
+/* .main-nav {
+    padding-left: 50%;
     width: 100%;
     padding-top: 5px;
     padding-bottom: 25px;
-    z-index: 1;
-}
+} */
 
-.main-nav {
+/* .main-nav {
     overflow: hidden;
-}
+} */
 
 .main-nav a {
     float:none;
