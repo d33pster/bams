@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Soumyo Deep Gupta, Sairam Pimple">
+        <meta name="description" content="Apply For Loan Page">
+    </head>
+
+    <body>
+        <center>
+            <h1>APPLY FOR LOAN</h1>
+        </center>
+        <center>
+            <form method="post" action="employment.php">
+                <p>Choose Work Type</p>
+                <div>
+                    <input type="radio" id="private-sector" name="org" value="Private-Sector"> <label for="private-sector">Private Sector</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="govt-sector" name="org" value="Govt-Sector"> <label for="govt-sector">Government Sector</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="other-sector" name="org" value="Other-Sector"> <label for="other-sector">Other</label><br>
+                </div>
+                <div>
+                    <label for="department">Department (leave empty if you selected Other): </label> <input type="text" id="dept" name="dept"><br>
+                    <label for="position">Position (leave empty if you selected Other): </label> <input type="text" id="position" name="position"><br>
+                    <label for="salary">Salary: </label> <input type="text" id="salary" name="salary">
+                </div>
+                <input type="submit">
+            </form>
+        </center>
+    </body>
+</html>
