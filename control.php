@@ -5,6 +5,6 @@
         header("Location: login.php");
     }
     else {
-        header("Location: index.html");
+        header("Location: index_loggedin.html");
     }
 ?>
