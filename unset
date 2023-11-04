@@ -30,7 +30,10 @@ def main():
         join(xampp, 'index.html'),
         join(xampp, 'login.html'),
         join(xampp, 'signup.html'),
-        join(xampp, 'signup.php')
+        join(xampp, 'signup.php'),
+        join(xampp, 'login.php'),
+        join(xampp, 'private.html'),
+        join(xampp, 'control.php')
     ]
     
     # delete root files
